@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="#212F3D"
     android:fillViewport="true">
 
     <LinearLayout
@@ -13,7 +13,7 @@
         android:paddingTop="40dp"
         android:paddingBottom="24dp">
 
-        <!-- 1. SALUDO Y BIENVENIDA PERSONALIZADA -->
+        <!-- 1. SALUDO Y BIENVENIDA CON EL LOGO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¡Hola, José Diego! 🔥"
+                    android:text="¡Hola, José Diego!"
                     android:textColor="#FFFFFF"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -38,19 +38,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Listo para superar tus metas hoy"
-                    android:textColor="#AAAAAA"
+                    android:text="Entrena como una bestia hoy"
+                    android:textColor="#BDC3C7"
                     android:textSize="14sp"
                     android:layout_marginTop="2dp" />
             </LinearLayout>
 
+            <!-- LOGO LLAMADO DESDE DRAWABLE -->
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_profile"
-                android:background="#1E1E1E"
-                android:padding="10dp"
-                app:tint="#3498DB" />
+                android:src="@drawable/muscle_cat_logo"
+                android:background="#2C3E50"
+                android:padding="4dp"
+                android:scaleType="centerCrop" />
         </LinearLayout>
 
         <!-- 2. RESUMEN DE ESTADÍSTICAS Y PROGRESO -->
@@ -61,7 +62,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#1E1E1E"
+            app:cardBackgroundColor="#2C3E50"
             app:cardElevation="4dp">
 
             <LinearLayout
@@ -74,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="📊 ESTADÍSTICAS DE LA SEMANA"
-                    android:textColor="#3498DB"
+                    android:textColor="#E67E22"
                     android:textSize="11sp"
                     android:textStyle="bold" />
 
@@ -90,8 +91,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¡Vas por buen camino! Te faltan 2 sesiones para cumplir tu meta semanal."
-                    android:textColor="#AAAAAA"
+                    android:text="¡Vas por buen camino! Te faltan 2 sesiones para cumplir tu meta de poder."
+                    android:textColor="#BDC3C7"
                     android:textSize="13sp"
                     android:layout_marginTop="4dp" />
             </LinearLayout>
@@ -105,7 +106,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#252525"
+            app:cardBackgroundColor="#2C3E50"
             app:cardElevation="4dp">
 
             <LinearLayout
@@ -118,14 +119,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="📅 PRÓXIMA CLASE PROGRAMADA"
-                    android:textColor="#F39C12"
+                    android:textColor="#E67E22"
                     android:textSize="11sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Spinning Pro - Hoy a las 18:00 hrs"
+                    android:text="Fuerza y Potencia - Hoy a las 18:00 hrs"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -134,8 +135,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Instructor: Carlos Mendoza • Sala 2"
-                    android:textColor="#AAAAAA"
+                    android:text="Instructor: Carlos Mendoza • Sala Principal"
+                    android:textColor="#BDC3C7"
                     android:textSize="13sp"
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="12dp" />
@@ -143,7 +144,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:backgroundTint="#333333"
+                    android:backgroundTint="#E67E22"
                     android:text="Ver Detalles"
                     android:textColor="#FFFFFF"
                     app:cornerRadius="10dp" />
@@ -172,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#1E1E1E">
+                app:cardBackgroundColor="#2C3E50">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -184,7 +185,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="📢 Horarios Especiales de Feriado"
-                        android:textColor="#27AE60"
+                        android:textColor="#E67E22"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -192,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="El próximo lunes el gimnasio abrirá en horario especial de 6:00 AM a 2:00 PM por motivo de día festivo."
-                        android:textColor="#AAAAAA"
+                        android:textColor="#BDC3C7"
                         android:textSize="13sp"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
@@ -202,7 +203,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#1E1E1E">
+                app:cardBackgroundColor="#2C3E50">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -213,16 +214,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💡 Tip del Día"
-                        android:textColor="#E74C3C"
+                        android:text="💡 Tip del Día de Muscle Cat"
+                        android:textColor="#E67E22"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Recuerda mantener una buena hidratación durante tus series para maximizar el rendimiento muscular y evitar lesiones."
-                        android:textColor="#AAAAAA"
+                        android:text="La constancia construye músculo. Mantén una buena hidratación y técnica impecable en cada levantamiento."
+                        android:textColor="#BDC3C7"
                         android:textSize="13sp"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
