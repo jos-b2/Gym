@@ -23,7 +23,6 @@ public class RoutinesFragment extends Fragment {
     private TextView txtNivelSeleccionado;
     private Spinner spinnerNivel;
 
-    // Variable para almacenar el nivel seleccionado (por defecto Principiante)
     private String nivelSeleccionado = "Principiante";
 
     @Nullable
@@ -31,15 +30,12 @@ public class RoutinesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_routines, container, false);
 
-        // Enlaces de vistas
         layoutSeleccionNivel = view.findViewById(R.id.layoutSeleccionNivel);
         layoutContenidoRutinas = view.findViewById(R.id.layoutContenidoRutinas);
         txtNivelSeleccionado = view.findViewById(R.id.txtNivelSeleccionado);
         spinnerNivel = view.findViewById(R.id.spinnerNivel);
-        MaterialCardView cardPecho = view.findViewById(R.id.cardPecho);
         MaterialButton btnCambiarNivel = view.findViewById(R.id.btnCambiarNivel);
 
-        // Opciones del Spinner
         String[] niveles = {
                 "Seleccionar dificultad",
                 "Principiante",
@@ -50,44 +46,50 @@ public class RoutinesFragment extends Fragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_dropdown_item, niveles);
         spinnerNivel.setAdapter(adapter);
 
-        // Evento al seleccionar una dificultad
         spinnerNivel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
                 if (position > 0) {
-                    // Guardar el nivel elegido en la variable global
                     nivelSeleccionado = niveles[position];
-
-                    // Actualizamos el texto con el nivel seleccionado y una estrella
                     txtNivelSeleccionado.setText("NIVEL: " + nivelSeleccionado.toUpperCase() + " ★");
-
-                    // Ocultamos la sección de selección central y mostramos las rutinas
                     layoutSeleccionNivel.setVisibility(View.GONE);
                     layoutContenidoRutinas.setVisibility(View.VISIBLE);
                 }
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Sin acción
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        // Botón "Cambiar" para volver al estado inicial de selección
         btnCambiarNivel.setOnClickListener(v -> {
-            spinnerNivel.setSelection(0); // Regresa el spinner a la opción predeterminada
+            spinnerNivel.setSelection(0);
             layoutContenidoRutinas.setVisibility(View.GONE);
             layoutSeleccionNivel.setVisibility(View.VISIBLE);
         });
 
-        // Evento de clic para la tarjeta de pecho enviando los datos mediante el Intent
-        cardPecho.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), ListaEjercicio.class);
-            intent.putExtra("EXTRA_NIVEL", nivelSeleccionado);
-            intent.putExtra("EXTRA_MUSCULO", "PECHO");
-            startActivity(intent);
-        });
+        // Configurar las 9 tarjetas de músculos
+        configurarTarjeta(view, R.id.cardPecho, "PECHO");
+        configurarTarjeta(view, R.id.cardEspalda, "ESPALDA");
+        configurarTarjeta(view, R.id.cardPiernas, "PIERNAS");
+        configurarTarjeta(view, R.id.cardHombros, "HOMBROS");
+        configurarTarjeta(view, R.id.cardBiceps, "BÍCEPS");
+        configurarTarjeta(view, R.id.cardTriceps, "TRÍCEPS");
+        configurarTarjeta(view, R.id.cardAbdomen, "ABDOMEN");
+        configurarTarjeta(view, R.id.cardCardio, "CARDIO");
+        configurarTarjeta(view, R.id.cardMixta, "MIXTA");
 
         return view;
+    }
+
+    private void configurarTarjeta(View rootView, int cardId, String nombreMusculo) {
+        MaterialCardView card = rootView.findViewById(cardId);
+        if (card != null) {
+            card.setOnClickListener(v -> {
+                Intent intent = new Intent(getActivity(), ListaEjercicio.class);
+                intent.putExtra("EXTRA_NIVEL", nivelSeleccionado);
+                intent.putExtra("EXTRA_MUSCULO", nombreMusculo);
+                startActivity(intent);
+            });
+        }
     }
 }

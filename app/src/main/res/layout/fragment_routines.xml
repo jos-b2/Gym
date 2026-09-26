@@ -150,6 +150,7 @@
 
                 <!-- 2. ESPALDA -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardEspalda"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_columnWeight="1"
@@ -185,6 +186,7 @@
 
                 <!-- 3. PIERNAS -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPiernas"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_columnWeight="1"
@@ -220,6 +222,7 @@
 
                 <!-- 4. HOMBROS -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardHombros"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_columnWeight="1"
@@ -255,6 +258,7 @@
 
                 <!-- 5. BÍCEPS -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardBiceps"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_columnWeight="1"
@@ -290,6 +294,7 @@
 
                 <!-- 6. TRÍCEPS -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTriceps"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_columnWeight="1"
@@ -325,6 +330,7 @@
 
                 <!-- 7. ABDOMEN -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardAbdomen"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_columnWeight="1"
@@ -360,6 +366,7 @@
 
                 <!-- 8. CARDIO -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCardio"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_columnWeight="1"
@@ -395,6 +402,7 @@
 
                 <!-- 9. MIXTA -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardMixta"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_columnWeight="1"
