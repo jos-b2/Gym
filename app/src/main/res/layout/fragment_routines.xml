@@ -57,6 +57,7 @@
 
             <!-- 1. PECHO -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPecho"
                 android:layout_width="0dp"
                 android:layout_height="105dp"
                 android:layout_columnWeight="1"

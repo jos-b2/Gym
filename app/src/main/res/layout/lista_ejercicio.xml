@@ -16,21 +16,46 @@
         android:paddingHorizontal="16dp"
         android:paddingTop="36dp">
 
-        <!-- CABECERA: TÍTULO Y RACHA -->
+        <!-- CABECERA: BOTÓN ATRÁS, TÍTULO Y RACHA -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/tvAppTitle"
+            <!-- CONTENEDOR IZQUIERDO: BOTÓN DE ATRÁS + TÍTULO -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:text="MUSCLE GYM"
-                android:textColor="#FFFFFF"
-                android:textSize="26sp"
-                android:textStyle="bold" />
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
+                <!-- BOTÓN DE FLECHA ATRÁS -->
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:src="@android:drawable/ic_menu_revert"
+                    app:tint="#E67E22" />
+
+                <!-- TÍTULO MUSCLE GYM -->
+                <TextView
+                    android:id="@+id/tvAppTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MUSCLE GYM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- RACHA (A LA DERECHA) -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +83,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView

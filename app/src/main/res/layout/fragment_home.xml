@@ -44,13 +44,13 @@
                     android:layout_marginTop="2dp" />
             </LinearLayout>
 
-            <!-- LOGO LLAMADO DESDE DRAWABLE -->
+            <!-- LOGO LLAMADO DESDE DRAWABLE (Ampliado a 64dp) -->
             <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:src="@drawable/muscle_cat_logo"
                 android:background="#2C3E50"
-                android:padding="4dp"
+                android:padding="6dp"
                 android:scaleType="centerCrop" />
         </LinearLayout>
 
