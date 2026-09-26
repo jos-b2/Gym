@@ -179,6 +179,7 @@
 
                 <!-- TARJETA 1 -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card1"
                     android:layout_width="match_parent"
                     android:layout_height="125dp"
                     android:layout_marginBottom="14dp"
@@ -227,18 +228,20 @@
                             app:strokeColor="#FFFFFF"
                             app:strokeWidth="1dp">
 
-                            <TextView
+                            <ImageView
+                                android:id="@+id/imgCard1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/captura_de_pantalla_2026_09_25_182537"
-                                android:gravity="center"
-                                android:textSize="34sp" />
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/captura_de_pantalla_2026_09_25_182537"
+                                tools:ignore="ContentDescription" />
                         </com.google.android.material.card.MaterialCardView>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <!-- TARJETA 2 -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card2"
                     android:layout_width="match_parent"
                     android:layout_height="125dp"
                     android:layout_marginBottom="14dp"
@@ -287,18 +290,20 @@
                             app:strokeColor="#FFFFFF"
                             app:strokeWidth="1dp">
 
-                            <TextView
+                            <ImageView
+                                android:id="@+id/imgCard2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/captura_de_pantalla_2026_09_25_182710"
-                                android:gravity="center"
-                                android:textSize="34sp" />
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/captura_de_pantalla_2026_09_25_182710"
+                                tools:ignore="ContentDescription" />
                         </com.google.android.material.card.MaterialCardView>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <!-- TARJETA 3 -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card3"
                     android:layout_width="match_parent"
                     android:layout_height="125dp"
                     android:layout_marginBottom="14dp"
@@ -347,18 +352,20 @@
                             app:strokeColor="#FFFFFF"
                             app:strokeWidth="1dp">
 
-                            <TextView
+                            <ImageView
+                                android:id="@+id/imgCard3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/captura_de_pantalla_2026_09_25_182808"
-                                android:gravity="center"
-                                android:textSize="34sp" />
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/captura_de_pantalla_2026_09_25_182808"
+                                tools:ignore="ContentDescription" />
                         </com.google.android.material.card.MaterialCardView>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <!-- TARJETA 4 (RECUPERACIÓN ACTIVA) -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card4"
                     android:layout_width="match_parent"
                     android:layout_height="125dp"
                     app:cardBackgroundColor="#17242E"
@@ -406,12 +413,13 @@
                             app:strokeColor="#E0E0E0"
                             app:strokeWidth="1dp">
 
-                            <TextView
+                            <ImageView
+                                android:id="@+id/imgCard4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/captura_de_pantalla_2026_09_25_182856"
-                                android:gravity="center"
-                                android:textSize="34sp" />
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/captura_de_pantalla_2026_09_25_182856"
+                                tools:ignore="ContentDescription" />
                         </com.google.android.material.card.MaterialCardView>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
