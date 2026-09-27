@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#212F3D"
+    android:background="#0A1118"
     android:fillViewport="true"
     android:fitsSystemWindows="true">
 
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:letterSpacing="0.04"
                 android:text="MUSCLE CAT"
-                android:textColor="#E67E22"
+                android:textColor="#E65100"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
                 android:layout_marginBottom="12dp"
                 android:letterSpacing="0.08"
                 android:text="SELECCIONAR NIVEL"
-                android:textColor="#E67E22"
+                android:textColor="#E65100"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -57,7 +57,7 @@
                 android:id="@+id/spinnerNivel"
                 android:layout_width="260dp"
                 android:layout_height="55dp"
-                android:background="#2C3E50"
+                android:background="@color/white"
                 android:paddingHorizontal="8dp" />
         </LinearLayout>
 
@@ -83,7 +83,7 @@
                     android:layout_weight="1"
                     android:letterSpacing="0.08"
                     android:text="NIVEL: AVANZADO ★"
-                    android:textColor="#E67E22"
+                    android:textColor="#E65100"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -97,9 +97,9 @@
                     android:text="Cambiar"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp"
-                    app:backgroundTint="#2C3E50"
+                    app:backgroundTint="#131F2A"
                     app:cornerRadius="8dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="1dp" />
             </LinearLayout>
 
@@ -121,9 +121,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="2dp">
 
                     <LinearLayout
@@ -143,7 +143,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="PECHO"
-                            android:textColor="#E67E22"
+                            android:textColor="#E65100"
                             android:textSize="12sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -157,9 +157,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#BDC3C7"
+                    app:strokeColor="#242F3D"
                     app:strokeWidth="1.5dp">
 
                     <LinearLayout
@@ -193,9 +193,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#BDC3C7"
+                    app:strokeColor="#242F3D"
                     app:strokeWidth="1.5dp">
 
                     <LinearLayout
@@ -229,9 +229,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#BDC3C7"
+                    app:strokeColor="#242F3D"
                     app:strokeWidth="1.5dp">
 
                     <LinearLayout
@@ -265,9 +265,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="2dp">
 
                     <LinearLayout
@@ -287,7 +287,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="BÍCEPS"
-                            android:textColor="#E67E22"
+                            android:textColor="#E65100"
                             android:textSize="12sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -301,9 +301,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#BDC3C7"
+                    app:strokeColor="#242F3D"
                     app:strokeWidth="1.5dp">
 
                     <LinearLayout
@@ -337,9 +337,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="2dp">
 
                     <LinearLayout
@@ -359,7 +359,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="ABDOMEN"
-                            android:textColor="#E67E22"
+                            android:textColor="#E65100"
                             android:textSize="12sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -373,9 +373,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#BDC3C7"
+                    app:strokeColor="#242F3D"
                     app:strokeWidth="1.5dp">
 
                     <LinearLayout
@@ -409,9 +409,9 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="4dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="14dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="2dp">
 
                     <LinearLayout
@@ -431,7 +431,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="MIXTA"
-                            android:textColor="#E67E22"
+                            android:textColor="#E65100"
                             android:textSize="12sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -447,7 +447,7 @@
                 android:layout_marginBottom="10dp"
                 android:letterSpacing="0.05"
                 android:text="FILTRO ADICIONAL"
-                android:textColor="#E67E22"
+                android:textColor="#E65100"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -469,9 +469,9 @@
                     android:text="FUERZA"
                     android:textColor="#FFFFFF"
                     android:textSize="10sp"
-                    app:backgroundTint="#2C3E50"
+                    app:backgroundTint="#131F2A"
                     app:cornerRadius="8dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="1dp"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -487,9 +487,9 @@
                     android:text="HIPERTROFIA"
                     android:textColor="#FFFFFF"
                     android:textSize="9.5sp"
-                    app:backgroundTint="#2C3E50"
+                    app:backgroundTint="#131F2A"
                     app:cornerRadius="8dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="1dp"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -505,9 +505,9 @@
                     android:text="RESISTENCIA"
                     android:textColor="#FFFFFF"
                     android:textSize="9.5sp"
-                    app:backgroundTint="#2C3E50"
+                    app:backgroundTint="#131F2A"
                     app:cornerRadius="8dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="1dp"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -515,9 +515,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="38dp"
                     android:layout_height="38dp"
-                    app:cardBackgroundColor="#2C3E50"
+                    app:cardBackgroundColor="#131F2A"
                     app:cardCornerRadius="19dp"
-                    app:strokeColor="#E67E22"
+                    app:strokeColor="#E65100"
                     app:strokeWidth="1.5dp">
 
                     <ImageView
@@ -525,7 +525,7 @@
                         android:layout_height="match_parent"
                         android:padding="7dp"
                         android:src="@android:drawable/ic_menu_rotate"
-                        app:tint="#E67E22" />
+                        app:tint="#E65100" />
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>

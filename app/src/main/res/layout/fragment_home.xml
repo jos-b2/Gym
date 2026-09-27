@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#212F3D"
+    android:background="#0A1118"
     android:fillViewport="true">
 
     <LinearLayout
@@ -17,9 +17,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="20dp">
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -30,7 +31,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¡Hola, José Diego!"
+                    android:text="¡Hola, José Diego! 👋"
                     android:textColor="#FFFFFF"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -38,32 +39,37 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Entrena como una bestia hoy"
-                    android:textColor="#BDC3C7"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp" />
+                    android:layout_marginTop="2dp"
+                    android:text="Entrena como una bestia hoy 🔥"
+                    android:textColor="#8E9AA8"
+                    android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- LOGO LLAMADO DESDE DRAWABLE (Ampliado a 64dp) -->
-            <ImageView
+            <!-- LOGO LLAMADO DESDE DRAWABLE CON BORDE ESTILIZADO -->
+            <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/muscle_cat_logo"
-                android:background="#2C3E50"
+                android:background="#131F2A"
                 android:padding="6dp"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/muscle_cat_logo"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialComponents.MaterialCalendar.Day"
+                app:strokeColor="#E65100"
+                app:strokeWidth="1.5dp" />
         </LinearLayout>
 
         <!-- 2. RESUMEN DE ESTADÍSTICAS Y PROGRESO -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#131F2A"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#2C3E50"
-            app:cardElevation="4dp">
+            app:cardElevation="0dp"
+            app:strokeColor="#242F3D"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,43 +77,71 @@
                 android:orientation="vertical"
                 android:padding="18dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="📊 ESTADÍSTICAS DE LA SEMANA"
-                    android:textColor="#E67E22"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📊 ESTADÍSTICAS DE LA SEMANA"
+                        android:textColor="#E65100"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="#E65100"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:text="3 de 5 Entrenamientos Completados"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="4dp" />
+                    android:textStyle="bold" />
+
+                <!-- BARRA VISUAL DE PROGRESO -->
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="10dp"
+                    android:max="5"
+                    android:progress="3"
+                    android:progressBackgroundTint="#242F3D"
+                    android:progressTint="#E65100" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="¡Vas por buen camino! Te faltan 2 sesiones para cumplir tu meta de poder."
-                    android:textColor="#BDC3C7"
-                    android:textSize="13sp"
-                    android:layout_marginTop="4dp" />
+                    android:textColor="#8E9AA8"
+                    android:textSize="13sp" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- 3. PRÓXIMA CLASE O EVENTO RESERVADO -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#131F2A"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#2C3E50"
-            app:cardElevation="4dp">
+            app:cardElevation="0dp"
+            app:strokeColor="#7A3D08"
+            app:strokeWidth="1.2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -115,119 +149,232 @@
                 android:orientation="vertical"
                 android:padding="18dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="📅 PRÓXIMA CLASE PROGRAMADA"
-                    android:textColor="#E67E22"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📅 PRÓXIMA CLASE PROGRAMADA"
+                        android:textColor="#E65100"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#242F3D"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="3dp"
+                        android:text="CONFIRMADA"
+                        android:textColor="#4CAF50"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Fuerza y Potencia - Hoy a las 18:00 hrs"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="4dp" />
+                    android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- CHIPS VISUALES DE INSTRUCTOR Y SALA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Instructor: Carlos Mendoza • Sala Principal"
-                    android:textColor="#BDC3C7"
-                    android:textSize="13sp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="12dp" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
 
-                <Button
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="#1C2733"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@android:drawable/ic_menu_myplaces"
+                            app:tint="#8E9AA8" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="Carlos Mendoza"
+                            android:textColor="#8E9AA8"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#1C2733"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@android:drawable/ic_dialog_map"
+                            app:tint="#8E9AA8" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="Sala Principal"
+                            android:textColor="#8E9AA8"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerDetallesClase"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:backgroundTint="#E67E22"
                     android:text="Ver Detalles"
                     android:textColor="#FFFFFF"
-                    app:cornerRadius="10dp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#E65100"
+                    app:cornerRadius="10dp"
+                    app:icon="@android:drawable/ic_menu_agenda"
+                    app:iconGravity="textStart"
+                    app:iconTint="#FFFFFF" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- 4. INFORMACIÓN Y NOVEDADES DEL GIMNASIO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp">
+            android:paddingHorizontal="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:text="Información y Novedades"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="12dp" />
+                android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
+            <!-- TARJETA NOVEDAD 1: HORARIOS -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="#131F2A"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#2C3E50">
+                app:cardElevation="0dp"
+                app:strokeColor="#242F3D"
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="📢 Horarios Especiales de Feriado"
-                        android:textColor="#E67E22"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="#1C2733"
+                        android:padding="8dp"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        app:tint="#E65100" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="El próximo lunes el gimnasio abrirá en horario especial de 6:00 AM a 2:00 PM por motivo de día festivo."
-                        android:textColor="#BDC3C7"
-                        android:textSize="13sp"
-                        android:layout_marginTop="4dp" />
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Horarios Especiales de Feriado"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="El próximo lunes el gimnasio abrirá de 6:00 AM a 2:00 PM por día festivo."
+                            android:textColor="#8E9AA8"
+                            android:textSize="12sp" />
+                    </LinearLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <!-- TARJETA NOVEDAD 2: TIP DEL DÍA -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:cardBackgroundColor="#131F2A"
                 app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#2C3E50">
+                app:cardElevation="0dp"
+                app:strokeColor="#242F3D"
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="💡 Tip del Día de Muscle Cat"
-                        android:textColor="#E67E22"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="#1C2733"
+                        android:padding="8dp"
+                        android:src="@android:drawable/btn_star_big_on"
+                        app:tint="#E65100" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="La constancia construye músculo. Mantén una buena hidratación y técnica impecable en cada levantamiento."
-                        android:textColor="#BDC3C7"
-                        android:textSize="13sp"
-                        android:layout_marginTop="4dp" />
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tip del Día de Muscle Cat"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="La constancia construye músculo. Mantén buena hidratación y técnica impecable en cada serie."
+                            android:textColor="#8E9AA8"
+                            android:textSize="12sp" />
+                    </LinearLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 
