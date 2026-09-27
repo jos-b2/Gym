@@ -57,7 +57,7 @@
                 android:id="@+id/spinnerNivel"
                 android:layout_width="260dp"
                 android:layout_height="55dp"
-                android:background="@color/white"
+                android:background="#928D8D"
                 android:paddingHorizontal="8dp" />
         </LinearLayout>
 
