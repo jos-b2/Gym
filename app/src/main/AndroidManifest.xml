@@ -26,6 +26,8 @@
             android:name=".ListaEjercicio"
             android:exported="false" />
 
+        <activity android:name=".VerEjercicio" android:exported="false" />
+
     </application>
 
 </manifest>

@@ -1,9 +1,11 @@
 package com.example.gym;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.card.MaterialCardView;
 
 public class ListaEjercicio extends AppCompatActivity {
 
@@ -47,6 +49,50 @@ public class ListaEjercicio extends AppCompatActivity {
                 tvCard3Titulo, tvCard3Sub,
                 tvCard4Titulo, tvCard4Sub,
                 imgCard1, imgCard2, imgCard3, imgCard4);
+
+        // =========================================================================
+        // CONFIGURACIÓN DE CLICS PARA ENVIAR DATOS A VerEjercicio
+        // =========================================================================
+        MaterialCardView card1 = findViewById(R.id.card1);
+        MaterialCardView card2 = findViewById(R.id.card2);
+        MaterialCardView card3 = findViewById(R.id.card3);
+        MaterialCardView card4 = findViewById(R.id.card4);
+
+        if (card1 != null) {
+            card1.setOnClickListener(v -> {
+                Intent intent = new Intent(ListaEjercicio.this, VerEjercicio.class);
+                intent.putExtra("TITULO", tvCard1Titulo.getText().toString());
+                intent.putExtra("DETALLE", tvCard1Sub.getText().toString());
+                startActivity(intent);
+            });
+        }
+
+        if (card2 != null) {
+            card2.setOnClickListener(v -> {
+                Intent intent = new Intent(ListaEjercicio.this, VerEjercicio.class);
+                intent.putExtra("TITULO", tvCard2Titulo.getText().toString());
+                intent.putExtra("DETALLE", tvCard2Sub.getText().toString());
+                startActivity(intent);
+            });
+        }
+
+        if (card3 != null) {
+            card3.setOnClickListener(v -> {
+                Intent intent = new Intent(ListaEjercicio.this, VerEjercicio.class);
+                intent.putExtra("TITULO", tvCard3Titulo.getText().toString());
+                intent.putExtra("DETALLE", tvCard3Sub.getText().toString());
+                startActivity(intent);
+            });
+        }
+
+        if (card4 != null) {
+            card4.setOnClickListener(v -> {
+                Intent intent = new Intent(ListaEjercicio.this, VerEjercicio.class);
+                intent.putExtra("TITULO", tvCard4Titulo.getText().toString());
+                intent.putExtra("DETALLE", tvCard4Sub.getText().toString());
+                startActivity(intent);
+            });
+        }
     }
 
     private void actualizarInformacionVista(String nivel, String musculo,
@@ -59,14 +105,61 @@ public class ListaEjercicio extends AppCompatActivity {
         if (tvNivel != null) tvNivel.setText("Nivel " + nivel + " ");
         if (tvDetalle != null) tvDetalle.setText("Rutina enfocada en " + musculo);
 
-        // Imágenes por defecto para evitar errores de compilación
         int resImg1 = R.drawable.captura_de_pantalla_2026_09_25_182537;
         int resImg2 = R.drawable.captura_de_pantalla_2026_09_25_182710;
         int resImg3 = R.drawable.captura_de_pantalla_2026_09_25_182808;
-        // La cuarta tarjeta es la de descanso/recuperación
         int resImg4 = R.drawable.captura_de_pantalla_2026_09_25_182856;
 
         switch (musculo.toUpperCase()) {
+            case "PECHO":
+                if (nivel.equalsIgnoreCase("Intermedio")) {
+                    t1Title.setText("Press de Banca Pesado");
+                    t1Sub.setText("4 series • 8 reps • Peso moderado-alto");
+                    resImg1 = R.drawable.captura_de_pantalla_2026_09_25_182537;
+
+                    t2Title.setText("Press Guillotina");
+                    t2Sub.setText("4 series • 8 reps • Barra o mancuernas de 20-25 kg (45-55 lbs)");
+                    resImg2 = R.drawable.captura_de_pantalla_2026_09_25_182710;
+
+                    t3Title.setText("Flexiones con Lastre");
+                    t3Sub.setText("4 series • 10 reps • Con disco de 10 kg (22 lbs) en espalda");
+                    resImg3 = R.drawable.captura_de_pantalla_2026_09_25_182808;
+
+                    t4Title.setText("Recuperación de Pecho");
+                    t4Sub.setText("Estiramientos y descanso activo");
+                } else if (nivel.equalsIgnoreCase("Avanzado")) {
+                    t1Title.setText("Press de Banca Pesado");
+                    t1Sub.setText("5 series • 5 reps • Peso orientativo: 60-80 kg (135-175 lbs)");
+                    resImg1 = R.drawable.captura_de_pantalla_2026_09_25_182537;
+
+                    t2Title.setText("Press Guillotina");
+                    t2Sub.setText("4 series • 8 reps • Barra o mancuernas de 20-25 kg (45-55 lbs)");
+                    resImg2 = R.drawable.captura_de_pantalla_2026_09_25_182710;
+
+                    t3Title.setText("Flexiones con Lastre");
+                    t3Sub.setText("4 series • 10 reps • Con disco de 10 kg (22 lbs) en espalda");
+                    resImg3 = R.drawable.captura_de_pantalla_2026_09_25_182808;
+
+                    t4Title.setText("Descarga de Pectorales");
+                    t4Sub.setText("Estiramientos profundos");
+                } else { // Principiante
+                    t1Title.setText("Press de Banca Pesado");
+                    t1Sub.setText("3 series • 10 reps • Peso ligero");
+                    resImg1 = R.drawable.captura_de_pantalla_2026_09_25_182537;
+
+                    t2Title.setText("Press Guillotina");
+                    t2Sub.setText("3 series • 10 reps • Barra o mancuernas ligeras");
+                    resImg2 = R.drawable.captura_de_pantalla_2026_09_25_182710;
+
+                    t3Title.setText("Flexiones con Lastre");
+                    t3Sub.setText("3 series • 10 reps • Sin peso o peso mínimo");
+                    resImg3 = R.drawable.captura_de_pantalla_2026_09_25_182808;
+
+                    t4Title.setText("Estiramiento Libre");
+                    t4Sub.setText("Descanso y relajación");
+                }
+                break;
+
             case "ESPALDA":
                 if (nivel.equalsIgnoreCase("Intermedio")) {
                     t1Title.setText("Remo en polea baja");

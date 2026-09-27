@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101920"
+    android:fillViewport="true"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- CABECERA: BOTÓN ATRÁS (IZQUIERDA) Y TÍTULO (DERECHA) -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Botón regresar -->
+            <ImageView
+                android:id="@+id/btnBackVer"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="#E67E22"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Título del ejercicio a la derecha -->
+            <TextView
+                android:id="@+id/tvNombreEjercicioVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/btnBackVer"
+                android:layout_marginStart="12dp"
+                android:gravity="end"
+                android:text="Nombre del Ejercicio"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- VIDEOVIEW PARA EL VIDEO -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#0D161C"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#2C3E50"
+            app:strokeWidth="1dp">
+
+            <VideoView
+                android:id="@+id/videoViewEjercicio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- SECCIÓN DE INFORMACIÓN (ENTRENADOR, RUTINA Y DETALLES) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#17242E"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#734B24"
+            app:strokeWidth="1.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Información del Ejercicio"
+                    android:textColor="#E67E22"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#2C3E50" />
+
+                <!-- Entrenador -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrenador a cargo:"
+                    android:textColor="#BDC3C7"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvEntrenador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Lic. Carlos Martínez"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Rutina -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rutina / Bloque:"
+                    android:textColor="#BDC3C7"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvRutinaDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="4 series · 10 reps · Nivel: Iniciación"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Otros detallitos / Recomendaciones -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detalles y Recomendaciones:"
+                    android:textColor="#BDC3C7"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvNotasAdicionales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Mantener la postura firme, controlar la respiración durante el esfuerzo y mantener la tensión muscular en todo el recorrido."
+                    android:textColor="#BDC3C7"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
