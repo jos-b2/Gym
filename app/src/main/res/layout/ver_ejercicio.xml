@@ -52,7 +52,7 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <!-- VIDEOVIEW PARA EL VIDEO -->
+        <!-- CONTENEDOR DEL VIDEO / AVISO DE NO DISPONIBLE -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="220dp"
@@ -62,10 +62,33 @@
             app:strokeColor="#2C3E50"
             app:strokeWidth="1dp">
 
-            <VideoView
-                android:id="@+id/videoViewEjercicio"
+            <!-- FrameLayout interno para superponer el VideoView y el TextView de aviso -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent">
+
+                <!-- VideoView para reproducir el video -->
+                <VideoView
+                    android:id="@+id/videoViewEjercicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <!-- Texto de aviso cuando no hay video disponible -->
+                <TextView
+                    android:id="@+id/tvAvisoVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Video no disponible por el momento"
+                    android:textColor="#BDC3C7"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:background="#0D161C" />
+
+            </FrameLayout>
+
         </com.google.android.material.card.MaterialCardView>
 
         <!-- SECCIÓN DE INFORMACIÓN (ENTRENADOR, RUTINA Y DETALLES) -->
